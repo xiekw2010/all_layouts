@@ -1,0 +1,15 @@
+PODS:
+  - ComponentKit (0.12)
+  - Nimbus/Core (1.2.0)
+  - Nimbus/Models (1.2.0):
+    - Nimbus/Core
+
+DEPENDENCIES:
+  - ComponentKit
+  - Nimbus/Models
+
+SPEC CHECKSUMS:
+  ComponentKit: b3f61a84a2490ee4ab7d410c75ccff32f381b04b
+  Nimbus: 074f2a2cf53f5f5fb25816d5ec829940c7439f9e
+
+COCOAPODS: 0.35.0

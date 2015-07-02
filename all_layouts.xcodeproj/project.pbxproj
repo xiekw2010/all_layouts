@@ -1,0 +1,548 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5FB1239B4D498DD692652960 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 054F7E75D4AECBE4A06554FE /* libPods.a */; };
+		BEE0733D1B412CB100415117 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE0733C1B412CB100415117 /* main.m */; };
+		BEE073401B412CB100415117 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEE0733F1B412CB100415117 /* Images.xcassets */; };
+		BEE073421B412CB100415117 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BEE073411B412CB100415117 /* InfoPlist.strings */; };
+		BEE073481B412CB100415117 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE073471B412CB100415117 /* HomeViewController.m */; };
+		BEE0734E1B412CB100415117 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE0734D1B412CB100415117 /* AppDelegate.m */; };
+		BEE073611B412E2B00415117 /* FLEXBOXContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE073581B412E2B00415117 /* FLEXBOXContainerView.m */; };
+		BEE073621B412E2B00415117 /* FLEXBOXNode.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE0735B1B412E2B00415117 /* FLEXBOXNode.m */; };
+		BEE073631B412E2B00415117 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEE0735C1B412E2B00415117 /* Info.plist */; };
+		BEE073641B412E2B00415117 /* Layout.c in Sources */ = {isa = PBXBuildFile; fileRef = BEE0735D1B412E2B00415117 /* Layout.c */; };
+		BEE073651B412E2B00415117 /* UIView+FLEXBOX.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE073601B412E2B00415117 /* UIView+FLEXBOX.m */; };
+		BEE073681B412E5900415117 /* ALFlexBoxKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE073671B412E5900415117 /* ALFlexBoxKitViewController.m */; };
+		BEE0736A1B413DDA00415117 /* FLEX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE073691B413DDA00415117 /* FLEX.framework */; };
+		BEE0736D1B4234FB00415117 /* ALFLexPropertiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE0736C1B4234FB00415117 /* ALFLexPropertiesViewController.m */; };
+		BEE0736F1B4244F700415117 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE0736E1B4244F700415117 /* Reveal.framework */; };
+		BEE073721B4283CF00415117 /* ALUtilViews.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE073711B4283CF00415117 /* ALUtilViews.m */; };
+		BEE073751B4284E900415117 /* SupportCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE073741B4284E900415117 /* SupportCode.swift */; };
+		BEE073861B429FD000415117 /* FLXData.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE073781B429FD000415117 /* FLXData.m */; };
+		BEE073871B429FD000415117 /* FLXLayoutStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE0737B1B429FD000415117 /* FLXLayoutStrategy.m */; };
+		BEE073881B429FD000415117 /* FLXNode.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE0737D1B429FD000415117 /* FLXNode.m */; };
+		BEE073891B429FD000415117 /* FLXView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE073801B429FD000415117 /* FLXView.m */; };
+		BEE0738A1B429FD000415117 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEE073811B429FD000415117 /* Info.plist */; };
+		BEE0738B1B429FD000415117 /* UIView+Flex.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE073831B429FD000415117 /* UIView+Flex.m */; };
+		BEE0738C1B429FD000415117 /* UIView+FLXNode.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE073851B429FD000415117 /* UIView+FLXNode.m */; };
+		BEE0738F1B42A0EB00415117 /* ALFLXExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE0738E1B42A0EB00415117 /* ALFLXExampleViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		054F7E75D4AECBE4A06554FE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		13269B9C945B14CA570CBFD7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		802DBA85A70D70F6DC9D512A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		BEE073361B412CB100415117 /* all_layouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = all_layouts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEE0733A1B412CB100415117 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEE0733B1B412CB100415117 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		BEE0733C1B412CB100415117 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BEE0733F1B412CB100415117 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BEE073411B412CB100415117 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		BEE073461B412CB100415117 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		BEE073471B412CB100415117 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		BEE0734C1B412CB100415117 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BEE0734D1B412CB100415117 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BEE073571B412E2B00415117 /* FLEXBOXContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLEXBOXContainerView.h; sourceTree = "<group>"; };
+		BEE073581B412E2B00415117 /* FLEXBOXContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLEXBOXContainerView.m; sourceTree = "<group>"; };
+		BEE073591B412E2B00415117 /* FlexboxKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlexboxKit.h; sourceTree = "<group>"; };
+		BEE0735A1B412E2B00415117 /* FLEXBOXNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLEXBOXNode.h; sourceTree = "<group>"; };
+		BEE0735B1B412E2B00415117 /* FLEXBOXNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLEXBOXNode.m; sourceTree = "<group>"; };
+		BEE0735C1B412E2B00415117 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEE0735D1B412E2B00415117 /* Layout.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Layout.c; sourceTree = "<group>"; };
+		BEE0735E1B412E2B00415117 /* Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Layout.h; sourceTree = "<group>"; };
+		BEE0735F1B412E2B00415117 /* UIView+FLEXBOX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FLEXBOX.h"; sourceTree = "<group>"; };
+		BEE073601B412E2B00415117 /* UIView+FLEXBOX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FLEXBOX.m"; sourceTree = "<group>"; };
+		BEE073661B412E5900415117 /* ALFlexBoxKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALFlexBoxKitViewController.h; sourceTree = "<group>"; };
+		BEE073671B412E5900415117 /* ALFlexBoxKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALFlexBoxKitViewController.m; sourceTree = "<group>"; };
+		BEE073691B413DDA00415117 /* FLEX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FLEX.framework; sourceTree = "<group>"; };
+		BEE0736B1B4234FB00415117 /* ALFLexPropertiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALFLexPropertiesViewController.h; sourceTree = "<group>"; };
+		BEE0736C1B4234FB00415117 /* ALFLexPropertiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALFLexPropertiesViewController.m; sourceTree = "<group>"; };
+		BEE0736E1B4244F700415117 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reveal.framework; path = "../../../../../Applications/Reveal.app/Contents/SharedSupport/iOS-Libraries/Reveal.framework"; sourceTree = "<group>"; };
+		BEE073701B4283CF00415117 /* ALUtilViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALUtilViews.h; sourceTree = "<group>"; };
+		BEE073711B4283CF00415117 /* ALUtilViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALUtilViews.m; sourceTree = "<group>"; };
+		BEE073731B4284E800415117 /* all_layouts-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "all_layouts-Bridging-Header.h"; sourceTree = "<group>"; };
+		BEE073741B4284E900415117 /* SupportCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportCode.swift; sourceTree = "<group>"; };
+		BEE073771B429FD000415117 /* FLXData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLXData.h; sourceTree = "<group>"; };
+		BEE073781B429FD000415117 /* FLXData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLXData.m; sourceTree = "<group>"; };
+		BEE073791B429FD000415117 /* FLXLayoutStrategy+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FLXLayoutStrategy+Internal.h"; sourceTree = "<group>"; };
+		BEE0737A1B429FD000415117 /* FLXLayoutStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLXLayoutStrategy.h; sourceTree = "<group>"; };
+		BEE0737B1B429FD000415117 /* FLXLayoutStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLXLayoutStrategy.m; sourceTree = "<group>"; };
+		BEE0737C1B429FD000415117 /* FLXNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLXNode.h; sourceTree = "<group>"; };
+		BEE0737D1B429FD000415117 /* FLXNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLXNode.m; sourceTree = "<group>"; };
+		BEE0737E1B429FD000415117 /* FLXTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLXTypes.h; sourceTree = "<group>"; };
+		BEE0737F1B429FD000415117 /* FLXView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLXView.h; sourceTree = "<group>"; };
+		BEE073801B429FD000415117 /* FLXView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLXView.m; sourceTree = "<group>"; };
+		BEE073811B429FD000415117 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEE073821B429FD000415117 /* UIView+Flex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Flex.h"; sourceTree = "<group>"; };
+		BEE073831B429FD000415117 /* UIView+Flex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Flex.m"; sourceTree = "<group>"; };
+		BEE073841B429FD000415117 /* UIView+FLXNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FLXNode.h"; sourceTree = "<group>"; };
+		BEE073851B429FD000415117 /* UIView+FLXNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FLXNode.m"; sourceTree = "<group>"; };
+		BEE0738D1B42A0EB00415117 /* ALFLXExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALFLXExampleViewController.h; sourceTree = "<group>"; };
+		BEE0738E1B42A0EB00415117 /* ALFLXExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALFLXExampleViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BEE073331B412CB100415117 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEE0736F1B4244F700415117 /* Reveal.framework in Frameworks */,
+				5FB1239B4D498DD692652960 /* libPods.a in Frameworks */,
+				BEE0736A1B413DDA00415117 /* FLEX.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4E0ED67E99B4B0E3B6D82755 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				054F7E75D4AECBE4A06554FE /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BEE0732D1B412CB100415117 = {
+			isa = PBXGroup;
+			children = (
+				BEE0736E1B4244F700415117 /* Reveal.framework */,
+				BEE073691B413DDA00415117 /* FLEX.framework */,
+				BEE073381B412CB100415117 /* all_layouts */,
+				BEE073371B412CB100415117 /* Products */,
+				D3B3C94316B182172B1B09EA /* Pods */,
+				4E0ED67E99B4B0E3B6D82755 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BEE073371B412CB100415117 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BEE073361B412CB100415117 /* all_layouts.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BEE073381B412CB100415117 /* all_layouts */ = {
+			isa = PBXGroup;
+			children = (
+				BEE073431B412CB100415117 /* Classes */,
+				BEE0733E1B412CB100415117 /* Resources */,
+				BEE073391B412CB100415117 /* Supporting Files */,
+			);
+			path = all_layouts;
+			sourceTree = "<group>";
+		};
+		BEE073391B412CB100415117 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BEE0733A1B412CB100415117 /* Info.plist */,
+				BEE0733B1B412CB100415117 /* Prefix.pch */,
+				BEE0733C1B412CB100415117 /* main.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BEE0733E1B412CB100415117 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BEE0733F1B412CB100415117 /* Images.xcassets */,
+				BEE073411B412CB100415117 /* InfoPlist.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BEE073431B412CB100415117 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BEE0734C1B412CB100415117 /* AppDelegate.h */,
+				BEE0734D1B412CB100415117 /* AppDelegate.m */,
+				BEE0734B1B412CB100415117 /* Vendors */,
+				BEE0734A1B412CB100415117 /* Categories */,
+				BEE073491B412CB100415117 /* Views */,
+				BEE073451B412CB100415117 /* Controllers */,
+				BEE073441B412CB100415117 /* Models */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		BEE073441B412CB100415117 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BEE073451B412CB100415117 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BEE073461B412CB100415117 /* HomeViewController.h */,
+				BEE073471B412CB100415117 /* HomeViewController.m */,
+				BEE073661B412E5900415117 /* ALFlexBoxKitViewController.h */,
+				BEE073671B412E5900415117 /* ALFlexBoxKitViewController.m */,
+				BEE0736B1B4234FB00415117 /* ALFLexPropertiesViewController.h */,
+				BEE0736C1B4234FB00415117 /* ALFLexPropertiesViewController.m */,
+				BEE0738D1B42A0EB00415117 /* ALFLXExampleViewController.h */,
+				BEE0738E1B42A0EB00415117 /* ALFLXExampleViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BEE073491B412CB100415117 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BEE073741B4284E900415117 /* SupportCode.swift */,
+				BEE073701B4283CF00415117 /* ALUtilViews.h */,
+				BEE073711B4283CF00415117 /* ALUtilViews.m */,
+				BEE073731B4284E800415117 /* all_layouts-Bridging-Header.h */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BEE0734A1B412CB100415117 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		BEE0734B1B412CB100415117 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				BEE073761B429FD000415117 /* FLXView */,
+				BEE073561B412E2B00415117 /* FlexboxKit */,
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		BEE073561B412E2B00415117 /* FlexboxKit */ = {
+			isa = PBXGroup;
+			children = (
+				BEE073571B412E2B00415117 /* FLEXBOXContainerView.h */,
+				BEE073581B412E2B00415117 /* FLEXBOXContainerView.m */,
+				BEE073591B412E2B00415117 /* FlexboxKit.h */,
+				BEE0735A1B412E2B00415117 /* FLEXBOXNode.h */,
+				BEE0735B1B412E2B00415117 /* FLEXBOXNode.m */,
+				BEE0735C1B412E2B00415117 /* Info.plist */,
+				BEE0735D1B412E2B00415117 /* Layout.c */,
+				BEE0735E1B412E2B00415117 /* Layout.h */,
+				BEE0735F1B412E2B00415117 /* UIView+FLEXBOX.h */,
+				BEE073601B412E2B00415117 /* UIView+FLEXBOX.m */,
+			);
+			path = FlexboxKit;
+			sourceTree = "<group>";
+		};
+		BEE073761B429FD000415117 /* FLXView */ = {
+			isa = PBXGroup;
+			children = (
+				BEE073771B429FD000415117 /* FLXData.h */,
+				BEE073781B429FD000415117 /* FLXData.m */,
+				BEE073791B429FD000415117 /* FLXLayoutStrategy+Internal.h */,
+				BEE0737A1B429FD000415117 /* FLXLayoutStrategy.h */,
+				BEE0737B1B429FD000415117 /* FLXLayoutStrategy.m */,
+				BEE0737C1B429FD000415117 /* FLXNode.h */,
+				BEE0737D1B429FD000415117 /* FLXNode.m */,
+				BEE0737E1B429FD000415117 /* FLXTypes.h */,
+				BEE0737F1B429FD000415117 /* FLXView.h */,
+				BEE073801B429FD000415117 /* FLXView.m */,
+				BEE073811B429FD000415117 /* Info.plist */,
+				BEE073821B429FD000415117 /* UIView+Flex.h */,
+				BEE073831B429FD000415117 /* UIView+Flex.m */,
+				BEE073841B429FD000415117 /* UIView+FLXNode.h */,
+				BEE073851B429FD000415117 /* UIView+FLXNode.m */,
+			);
+			path = FLXView;
+			sourceTree = "<group>";
+		};
+		D3B3C94316B182172B1B09EA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				13269B9C945B14CA570CBFD7 /* Pods.debug.xcconfig */,
+				802DBA85A70D70F6DC9D512A /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BEE073351B412CB100415117 /* all_layouts */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEE073531B412CB100415117 /* Build configuration list for PBXNativeTarget "all_layouts" */;
+			buildPhases = (
+				2F7EC96ED4702F1BFE7B99BD /* Check Pods Manifest.lock */,
+				BEE073321B412CB100415117 /* Sources */,
+				BEE073331B412CB100415117 /* Frameworks */,
+				BEE073341B412CB100415117 /* Resources */,
+				7154C4834AD0E7673ADCF688 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = all_layouts;
+			productName = all_layouts;
+			productReference = BEE073361B412CB100415117 /* all_layouts.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BEE0732E1B412CB100415117 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AL;
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = xiekw;
+				TargetAttributes = {
+					BEE073351B412CB100415117 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+				};
+			};
+			buildConfigurationList = BEE073311B412CB100415117 /* Build configuration list for PBXProject "all_layouts" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BEE0732D1B412CB100415117;
+			productRefGroup = BEE073371B412CB100415117 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BEE073351B412CB100415117 /* all_layouts */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BEE073341B412CB100415117 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEE0738A1B429FD000415117 /* Info.plist in Resources */,
+				BEE073401B412CB100415117 /* Images.xcassets in Resources */,
+				BEE073421B412CB100415117 /* InfoPlist.strings in Resources */,
+				BEE073631B412E2B00415117 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F7EC96ED4702F1BFE7B99BD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7154C4834AD0E7673ADCF688 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BEE073321B412CB100415117 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEE073881B429FD000415117 /* FLXNode.m in Sources */,
+				BEE073621B412E2B00415117 /* FLEXBOXNode.m in Sources */,
+				BEE073891B429FD000415117 /* FLXView.m in Sources */,
+				BEE073641B412E2B00415117 /* Layout.c in Sources */,
+				BEE0736D1B4234FB00415117 /* ALFLexPropertiesViewController.m in Sources */,
+				BEE073721B4283CF00415117 /* ALUtilViews.m in Sources */,
+				BEE0733D1B412CB100415117 /* main.m in Sources */,
+				BEE0738F1B42A0EB00415117 /* ALFLXExampleViewController.m in Sources */,
+				BEE0738C1B429FD000415117 /* UIView+FLXNode.m in Sources */,
+				BEE073871B429FD000415117 /* FLXLayoutStrategy.m in Sources */,
+				BEE073681B412E5900415117 /* ALFlexBoxKitViewController.m in Sources */,
+				BEE073481B412CB100415117 /* HomeViewController.m in Sources */,
+				BEE073651B412E2B00415117 /* UIView+FLEXBOX.m in Sources */,
+				BEE0738B1B429FD000415117 /* UIView+Flex.m in Sources */,
+				BEE073861B429FD000415117 /* FLXData.m in Sources */,
+				BEE073751B4284E900415117 /* SupportCode.swift in Sources */,
+				BEE0734E1B412CB100415117 /* AppDelegate.m in Sources */,
+				BEE073611B412E2B00415117 /* FLEXBOXContainerView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BEE073511B412CB100415117 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BEE073521B412CB100415117 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		BEE073541B412CB100415117 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13269B9C945B14CA570CBFD7 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(SYSTEM_APPS_DIR)/Reveal.app/Contents/SharedSupport/iOS-Libraries",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "all_layouts/Supporting Files/Prefix.pch";
+				INFOPLIST_FILE = "all_layouts/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "all_layouts/Classes/Views/all_layouts-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BEE073551B412CB100415117 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 802DBA85A70D70F6DC9D512A /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(SYSTEM_APPS_DIR)/Reveal.app/Contents/SharedSupport/iOS-Libraries",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "all_layouts/Supporting Files/Prefix.pch";
+				INFOPLIST_FILE = "all_layouts/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "all_layouts/Classes/Views/all_layouts-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BEE073311B412CB100415117 /* Build configuration list for PBXProject "all_layouts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEE073511B412CB100415117 /* Debug */,
+				BEE073521B412CB100415117 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEE073531B412CB100415117 /* Build configuration list for PBXNativeTarget "all_layouts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEE073541B412CB100415117 /* Debug */,
+				BEE073551B412CB100415117 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BEE0732E1B412CB100415117 /* Project object */;
+}
