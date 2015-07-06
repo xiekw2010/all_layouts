@@ -32,8 +32,10 @@
                  navigationBlock:NIPushControllerAction(NSClassFromString(@"ALFLexPropertiesViewController"))],
         @"FLXView",
         [_actions attachToObject:[NISubtitleCellObject objectWithTitle:@"Demo" subtitle:@""]
-                 navigationBlock:NIPushControllerAction(NSClassFromString(@"ALFLXExampleViewController"))]
-        
+                 navigationBlock:NIPushControllerAction(NSClassFromString(@"ALFLXExampleViewController"))],
+        @"HRFLXNode",
+        [_actions attachToObject:[NISubtitleCellObject objectWithTitle:@"Demo" subtitle:@""]
+                 navigationBlock:NIPushControllerAction(NSClassFromString(@"ALHRFLXNodeViewController"))]
         ];
     _model = [[NITableViewModel alloc] initWithSectionedArray:sections delegate:(id)[NICellFactory class]];
     

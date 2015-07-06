@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5FB1239B4D498DD692652960 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 054F7E75D4AECBE4A06554FE /* libPods.a */; };
+		BE53D6511B48C3C300749B08 /* HRFLXNode.m in Sources */ = {isa = PBXBuildFile; fileRef = BE53D6501B48C3C300749B08 /* HRFLXNode.m */; };
+		BE53D6551B4A1F9700749B08 /* ALHRFLXNodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE53D6541B4A1F9700749B08 /* ALHRFLXNodeViewController.m */; };
+		BE53D6581B4A32B700749B08 /* ALFLEXBOXUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BE53D6571B4A32B700749B08 /* ALFLEXBOXUtils.m */; };
 		BEE0733D1B412CB100415117 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE0733C1B412CB100415117 /* main.m */; };
 		BEE073401B412CB100415117 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEE0733F1B412CB100415117 /* Images.xcassets */; };
 		BEE073421B412CB100415117 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BEE073411B412CB100415117 /* InfoPlist.strings */; };
@@ -38,6 +41,12 @@
 		054F7E75D4AECBE4A06554FE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		13269B9C945B14CA570CBFD7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		802DBA85A70D70F6DC9D512A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		BE53D64F1B48C3C300749B08 /* HRFLXNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRFLXNode.h; sourceTree = "<group>"; };
+		BE53D6501B48C3C300749B08 /* HRFLXNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRFLXNode.m; sourceTree = "<group>"; };
+		BE53D6531B4A1F9700749B08 /* ALHRFLXNodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALHRFLXNodeViewController.h; sourceTree = "<group>"; };
+		BE53D6541B4A1F9700749B08 /* ALHRFLXNodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALHRFLXNodeViewController.m; sourceTree = "<group>"; };
+		BE53D6561B4A32B700749B08 /* ALFLEXBOXUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALFLEXBOXUtils.h; sourceTree = "<group>"; };
+		BE53D6571B4A32B700749B08 /* ALFLEXBOXUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALFLEXBOXUtils.m; sourceTree = "<group>"; };
 		BEE073361B412CB100415117 /* all_layouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = all_layouts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEE0733A1B412CB100415117 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEE0733B1B412CB100415117 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
@@ -107,6 +116,15 @@
 				054F7E75D4AECBE4A06554FE /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE53D64E1B48C3B000749B08 /* HRFLXLayout */ = {
+			isa = PBXGroup;
+			children = (
+				BE53D64F1B48C3C300749B08 /* HRFLXNode.h */,
+				BE53D6501B48C3C300749B08 /* HRFLXNode.m */,
+			);
+			path = HRFLXLayout;
 			sourceTree = "<group>";
 		};
 		BEE0732D1B412CB100415117 = {
@@ -190,6 +208,10 @@
 				BEE0736C1B4234FB00415117 /* ALFLexPropertiesViewController.m */,
 				BEE0738D1B42A0EB00415117 /* ALFLXExampleViewController.h */,
 				BEE0738E1B42A0EB00415117 /* ALFLXExampleViewController.m */,
+				BE53D6531B4A1F9700749B08 /* ALHRFLXNodeViewController.h */,
+				BE53D6541B4A1F9700749B08 /* ALHRFLXNodeViewController.m */,
+				BE53D6561B4A32B700749B08 /* ALFLEXBOXUtils.h */,
+				BE53D6571B4A32B700749B08 /* ALFLEXBOXUtils.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -215,6 +237,7 @@
 		BEE0734B1B412CB100415117 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				BE53D64E1B48C3B000749B08 /* HRFLXLayout */,
 				BEE073761B429FD000415117 /* FLXView */,
 				BEE073561B412E2B00415117 /* FlexboxKit */,
 			);
@@ -298,6 +321,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = AL;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = xiekw;
 				TargetAttributes = {
@@ -377,11 +401,14 @@
 			files = (
 				BEE073881B429FD000415117 /* FLXNode.m in Sources */,
 				BEE073621B412E2B00415117 /* FLEXBOXNode.m in Sources */,
+				BE53D6511B48C3C300749B08 /* HRFLXNode.m in Sources */,
+				BE53D6581B4A32B700749B08 /* ALFLEXBOXUtils.m in Sources */,
 				BEE073891B429FD000415117 /* FLXView.m in Sources */,
 				BEE073641B412E2B00415117 /* Layout.c in Sources */,
 				BEE0736D1B4234FB00415117 /* ALFLexPropertiesViewController.m in Sources */,
 				BEE073721B4283CF00415117 /* ALUtilViews.m in Sources */,
 				BEE0733D1B412CB100415117 /* main.m in Sources */,
+				BE53D6551B4A1F9700749B08 /* ALHRFLXNodeViewController.m in Sources */,
 				BEE0738F1B42A0EB00415117 /* ALFLXExampleViewController.m in Sources */,
 				BEE0738C1B429FD000415117 /* UIView+FLXNode.m in Sources */,
 				BEE073871B429FD000415117 /* FLXLayoutStrategy.m in Sources */,
