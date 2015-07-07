@@ -33,10 +33,15 @@
 
 @end
 
+static int __i;
 
 static inline UIView *createBoxWithRandomColor() {
-    UIView *box = [UIView new];
+    __i ++;
+    UILabel *box = [UILabel new];
     box.backgroundColor = [UIColor randomColor];
+    box.text = [NSString stringWithFormat:@"%d", __i];
+    box.font = [UIFont systemFontOfSize:30.0];
+    box.textAlignment = NSTextAlignmentCenter;
     return box;
 }
 
@@ -50,6 +55,13 @@ static NSString * const kContent = @"The Réunion parrot or Dubois's parrot (Nec
 }
 + (UIView *)randomColorBox {
     return createBoxWithRandomColor();
+}
+
++ (UILabel *)randomColorLabelWithText:(NSString *)text fontSize:(CGFloat)fontSize {
+    UILabel *label = [UILabel new];
+    label.text = text;
+    label.font = [UIFont systemFontOfSize:fontSize];
+    return label;
 }
 
 + (CGSize)textSizeWithLabel:(UILabel *)label constrainedSize:(CGSize)constrainedSize {

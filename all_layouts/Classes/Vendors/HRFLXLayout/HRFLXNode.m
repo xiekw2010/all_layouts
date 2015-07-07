@@ -8,6 +8,8 @@
 
 #import "HRFLXNode.h"
 
+CGFloat const HRFLXLayoutFloatUnDefined = CSS_UNDEFINED;
+
 static bool alwaysDirty(void *context) {
     HRFLXNode *self = (__bridge HRFLXNode *)context;
     return self->_dirty;
@@ -31,11 +33,15 @@ static css_dim_t measureNode(void *context, float width) {
     NSArray *_childNodes;
 }
 
-@synthesize node = _node;
+@synthesize node = _node, dimensions = _dimensions;
 
 - (instancetype)init {
     NSAssert(0, @"Use initWithView:children: initilizer");
     return nil;
+}
+
+- (void)dealloc {
+    free_css_node(_node);
 }
 
 - (id)initWithView:(UIView *)view children:(NSArray *)childNodes {
@@ -49,8 +55,9 @@ static css_dim_t measureNode(void *context, float width) {
         //defaults
         self.direction = HRFLXLayoutDirectionColumn;
         self.flexWrap = NO;
-        self.alignItems = HRFLXLayoutAlignItemsStretch;
-        self.alignSelf = HRFLXLayoutAlignSelfAuto;
+        self.alignItems = HRFLXLayoutAlignmentStretch;
+        self.alignContent = HRFLXLayoutAlignmentStart;
+        self.alignSelf = HRFLXLayoutAlignmentAuto;
         self.margin = UIEdgeInsetsZero;
         self.padding = UIEdgeInsetsZero;
         self.justification = HRFLXLayoutJustificationStart;
@@ -93,78 +100,60 @@ static css_dim_t measureNode(void *context, float width) {
     };
 }
 
-// Apparently we need to reset these before laying out, otherwise the layout
-// has some weird additive effect.
-- (void)_prepareForLayoutWithNode {
-    for (HRFLXNode *child in _childNodes) {
-        [child _prepareForLayoutWithNode];
-    }
-    
-    self.node->layout.position[CSS_LEFT] = 0;
-    self.node->layout.position[CSS_TOP] = 0;
-    self.node->layout.dimensions[CSS_WIDTH] = CSS_UNDEFINED;
-    self.node->layout.dimensions[CSS_HEIGHT] = CSS_UNDEFINED;
-}
-
 - (void)_layoutWithNode {
-    CGFloat start = CFAbsoluteTimeGetCurrent();
-    [self _prepareForLayoutWithNode];
-    layoutNode(self.node, CGRectGetWidth(self.frame), self.node->style.direction);
-    for (HRFLXNode *subNode in self.childNodes) {
-        subNode.dimensions = [subNode frame].size;
-        if ([subNode isContainer]) {
-            [subNode _layoutWithNode];
-        }
-    }
-    NSLog(@"~~~_layoutWithNode node children count %lu takes %f", (unsigned long)self.childNodes.count, CFAbsoluteTimeGetCurrent() - start);
+    layoutNode(_node, self.dimensions.width, _node->style.direction);
 }
 
 - (void)_assignNodeFrame {
+    self.view.frame = self.frame;
     for (HRFLXNode *subNode in _childNodes) {
-        subNode.view.frame = [subNode frame];
         if ([subNode isContainer]) {
             [subNode _assignNodeFrame];
+        } else {
+            subNode.view.frame = subNode.frame;
         }
     }
 }
 
-- (void)layoutSizeThatFits {
-}
-
-- (void)_layoutAysnc:(BOOL)aysnc {
-    self.dimensions = self.view.bounds.size;
-    
+- (void)layoutAysnc:(BOOL)aysnc completionBlock:(dispatch_block_t)block {
     if (aysnc) {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
             [self _layoutWithNode];
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self _assignNodeFrame];
                 _dirty = NO;
+                if (block) {
+                    block();
+                }
             });
         });
     } else {
         [self _layoutWithNode];
         [self _assignNodeFrame];
         _dirty = NO;
+        if (block) {
+            block();
+        }
     }
 }
 
 - (void)layout {
-    [self _layoutAysnc:NO];
-}
-
-- (void)layoutAysnc {
-    [self _layoutAysnc:YES];
+    [self layoutAysnc:NO completionBlock:NULL];
 }
 
 - (void)setNeedsLayout {
     if (_dirty) {
-        [self layoutAysnc];
+        [self layout];
     }
 }
 
-- (void)dealloc {
-    free_css_node(_node);
+- (CGSize)dimensions {
+    if (CGSizeEqualToSize(_dimensions, CGSizeZero)) {
+        _dimensions = self.view.bounds.size;
+        _node->style.dimensions[CSS_WIDTH] = _dimensions.width;
+        _node->style.dimensions[CSS_HEIGHT] = _dimensions.height;
+    }
+    return _dimensions;
 }
 
 - (void)setDimensions:(CGSize)size {
@@ -218,7 +207,14 @@ static css_dim_t measureNode(void *context, float width) {
     _dirty = YES;
 }
 
-- (void)setAlignItems:(HRFLXLayoutAlignItems)alignItems {
+- (void)setAlignContent:(HRFLXLayoutAlignment)alignContent {
+    if (_alignContent == alignContent) return;
+    _alignContent = alignContent;
+    _node->style.align_content = (int)alignContent;
+    _dirty = YES;
+}
+
+- (void)setAlignItems:(HRFLXLayoutAlignment)alignItems {
     if (_alignItems == alignItems) return;
     _alignItems = alignItems;
     _node->style.align_items = (int)_alignItems;
@@ -239,7 +235,7 @@ static css_dim_t measureNode(void *context, float width) {
     _dirty = YES;
 }
 
-- (void)setAlignSelf:(HRFLXLayoutAlignSelf)alignSelf {
+- (void)setAlignSelf:(HRFLXLayoutAlignment)alignSelf {
     if (_alignSelf == alignSelf) return;
     _alignSelf = alignSelf;
     _node->style.align_self = (int)_alignSelf;

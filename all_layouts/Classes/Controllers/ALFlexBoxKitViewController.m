@@ -28,23 +28,9 @@ static CGFloat const margin = 8.0;
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    [self render1];
+    [self render];
 }
 
-- (void)render1 {
-    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
-    scrollView.backgroundColor = [UIColor lightGrayColor];
-    scrollView.flexContainer = YES;
-    [self.view addSubview:scrollView];
-    scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 1000.0);
-    
-    [scrollView addSubview:[ALFLEXBOXUtils randomColorBox]];
-    [scrollView addSubview:[ALFLEXBOXUtils randomColorBox]];
-    [scrollView addSubview:[ALFLEXBOXUtils randomColorBox]];
-    [scrollView addSubview:[ALFLEXBOXUtils randomColorBox]];
-    
-    [scrollView flexLayoutSubviews];
-}
 
 - (void)render {
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];

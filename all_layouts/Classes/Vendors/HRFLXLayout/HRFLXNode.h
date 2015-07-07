@@ -9,20 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "Layout.h"
 
-typedef NS_ENUM(NSInteger, HRFLXLayoutAlignItems) {
-    HRFLXLayoutAlignItemsAuto = CSS_ALIGN_AUTO,
-    HRFLXLayoutAlignItemsStart = CSS_ALIGN_FLEX_START,
-    HRFLXLayoutAlignItemsCenter = CSS_ALIGN_CENTER,
-    HRFLXLayoutAlignItemsFlexEnd = CSS_ALIGN_FLEX_END,
-    HRFLXLayoutAlignItemsStretch = CSS_ALIGN_STRETCH
-};
+FOUNDATION_EXTERN CGFloat const HRFLXLayoutFloatUnDefined;
 
-typedef NS_ENUM(NSInteger, HRFLXLayoutAlignSelf) {
-    HRFLXLayoutAlignSelfAuto = CSS_ALIGN_AUTO,
-    HRFLXLayoutAlignSelfStart = CSS_ALIGN_FLEX_START,
-    HRFLXLayoutAlignSelfCenter = CSS_ALIGN_CENTER,
-    HRFLXLayoutAlignSelfFlexEnd = CSS_ALIGN_FLEX_END,
-    HRFLXLayoutAlignSelfStretch = CSS_ALIGN_STRETCH
+typedef NS_ENUM(NSInteger, HRFLXLayoutAlignment) {
+    HRFLXLayoutAlignmentAuto = CSS_ALIGN_AUTO,
+    HRFLXLayoutAlignmentStart = CSS_ALIGN_FLEX_START,
+    HRFLXLayoutAlignmentCenter = CSS_ALIGN_CENTER,
+    HRFLXLayoutAlignmentEnd = CSS_ALIGN_FLEX_END,
+    HRFLXLayoutAlignmentStretch = CSS_ALIGN_STRETCH
 };
 
 typedef NS_ENUM(NSInteger, HRFLXLayoutDirection) {
@@ -51,27 +45,25 @@ typedef NS_ENUM(NSInteger, HRFLXLayoutJustification) {
 @property (nonatomic, strong, readonly) NSArray *childNodes;
 
 @property (nonatomic, assign) HRFLXLayoutDirection direction;
-@property (nonatomic, assign) HRFLXLayoutAlignItems alignItems;
+@property (nonatomic, assign) HRFLXLayoutAlignment alignItems;
+@property (nonatomic, assign) HRFLXLayoutAlignment alignContent;
 @property (nonatomic, assign) HRFLXLayoutJustification justification;
 
 @property (nonatomic, assign) BOOL flexWrap;
-@property (nonatomic, assign) HRFLXLayoutAlignSelf alignSelf;
+@property (nonatomic, assign) HRFLXLayoutAlignment alignSelf;
 @property (nonatomic, assign) CGFloat flex;
 
+// eg:Direction is column, it can is {fixedX, CSS_UNDEFINED} or {fixedX, fixedY}, former the size depends on the children, later children's size depends on the fixedY
 @property (nonatomic, assign) CGSize dimensions;
 @property (nonatomic, assign) CGSize minDimensions;
 @property (nonatomic, assign) CGSize maxDimensions;
 @property (nonatomic, assign) UIEdgeInsets margin;
 @property (nonatomic, assign) UIEdgeInsets padding;
-
-// If the direction is column the width is father node's width - padding - margin, otherwise is NAN
 @property (nonatomic, copy) CGSize (^measure)(CGFloat width);
 
 - (id)initWithView:(UIView *)view children:(NSArray *)childNodes;
 
-- (void)layoutSizeThatFits;
-- (void)layout;
-- (void)layoutAysnc;
+- (void)layoutAysnc:(BOOL)aysnc completionBlock:(dispatch_block_t)block;
 - (void)setNeedsLayout;
 
 @end

@@ -18,6 +18,11 @@
     NITableViewModel *_model;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -34,8 +39,10 @@
         [_actions attachToObject:[NISubtitleCellObject objectWithTitle:@"Demo" subtitle:@""]
                  navigationBlock:NIPushControllerAction(NSClassFromString(@"ALFLXExampleViewController"))],
         @"HRFLXNode",
-        [_actions attachToObject:[NISubtitleCellObject objectWithTitle:@"Demo" subtitle:@""]
-                 navigationBlock:NIPushControllerAction(NSClassFromString(@"ALHRFLXNodeViewController"))]
+        [_actions attachToObject:[NISubtitleCellObject objectWithTitle:@"Simple" subtitle:@""]
+                 navigationBlock:NIPushControllerAction(NSClassFromString(@"ALHRFLXNodeViewController"))],
+        [_actions attachToObject:[NISubtitleCellObject objectWithTitle:@"Middle" subtitle:@""]
+                 navigationBlock:NIPushControllerAction(NSClassFromString(@"ALHRFLXNodeMiddleViewController"))]
         ];
     _model = [[NITableViewModel alloc] initWithSectionedArray:sections delegate:(id)[NICellFactory class]];
     

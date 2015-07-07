@@ -12,6 +12,8 @@
 
 + (NSString *)kContent;
 + (UIView *)randomColorBox;
++ (UILabel *)randomColorLabelWithText:(NSString *)text fontSize:(CGFloat)fontSize;
+
 + (CGSize)textSizeWithLabel:(UILabel *)label constrainedSize:(CGSize)constrainedSize;
 
 @end

@@ -24,6 +24,15 @@
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:catalogController];
     [self.window makeKeyAndVisible];
 
+    int endLine = 0;
+    int count = 5;
+    while (endLine < count) {
+        for (int i = 0; i < count; i ++) {
+            NSLog(@"1");
+            endLine = i + 1;
+        }
+        NSLog(@"2");
+    }
     
     return YES;
 }

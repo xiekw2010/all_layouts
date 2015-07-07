@@ -11,6 +11,8 @@
 		BE53D6511B48C3C300749B08 /* HRFLXNode.m in Sources */ = {isa = PBXBuildFile; fileRef = BE53D6501B48C3C300749B08 /* HRFLXNode.m */; };
 		BE53D6551B4A1F9700749B08 /* ALHRFLXNodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE53D6541B4A1F9700749B08 /* ALHRFLXNodeViewController.m */; };
 		BE53D6581B4A32B700749B08 /* ALFLEXBOXUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BE53D6571B4A32B700749B08 /* ALFLEXBOXUtils.m */; };
+		BEAA7B521B4BAFCE0030BA72 /* ALSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA7B511B4BAFCE0030BA72 /* ALSampleViewController.m */; };
+		BEAA7B551B4BB0B40030BA72 /* ALHRFLXNodeMiddleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA7B541B4BB0B40030BA72 /* ALHRFLXNodeMiddleViewController.m */; };
 		BEE0733D1B412CB100415117 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE0733C1B412CB100415117 /* main.m */; };
 		BEE073401B412CB100415117 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEE0733F1B412CB100415117 /* Images.xcassets */; };
 		BEE073421B412CB100415117 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BEE073411B412CB100415117 /* InfoPlist.strings */; };
@@ -47,6 +49,10 @@
 		BE53D6541B4A1F9700749B08 /* ALHRFLXNodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALHRFLXNodeViewController.m; sourceTree = "<group>"; };
 		BE53D6561B4A32B700749B08 /* ALFLEXBOXUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALFLEXBOXUtils.h; sourceTree = "<group>"; };
 		BE53D6571B4A32B700749B08 /* ALFLEXBOXUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALFLEXBOXUtils.m; sourceTree = "<group>"; };
+		BEAA7B501B4BAFCE0030BA72 /* ALSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALSampleViewController.h; sourceTree = "<group>"; };
+		BEAA7B511B4BAFCE0030BA72 /* ALSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALSampleViewController.m; sourceTree = "<group>"; };
+		BEAA7B531B4BB0B40030BA72 /* ALHRFLXNodeMiddleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALHRFLXNodeMiddleViewController.h; sourceTree = "<group>"; };
+		BEAA7B541B4BB0B40030BA72 /* ALHRFLXNodeMiddleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALHRFLXNodeMiddleViewController.m; sourceTree = "<group>"; };
 		BEE073361B412CB100415117 /* all_layouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = all_layouts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEE0733A1B412CB100415117 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEE0733B1B412CB100415117 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
@@ -202,6 +208,8 @@
 			children = (
 				BEE073461B412CB100415117 /* HomeViewController.h */,
 				BEE073471B412CB100415117 /* HomeViewController.m */,
+				BEAA7B501B4BAFCE0030BA72 /* ALSampleViewController.h */,
+				BEAA7B511B4BAFCE0030BA72 /* ALSampleViewController.m */,
 				BEE073661B412E5900415117 /* ALFlexBoxKitViewController.h */,
 				BEE073671B412E5900415117 /* ALFlexBoxKitViewController.m */,
 				BEE0736B1B4234FB00415117 /* ALFLexPropertiesViewController.h */,
@@ -210,6 +218,8 @@
 				BEE0738E1B42A0EB00415117 /* ALFLXExampleViewController.m */,
 				BE53D6531B4A1F9700749B08 /* ALHRFLXNodeViewController.h */,
 				BE53D6541B4A1F9700749B08 /* ALHRFLXNodeViewController.m */,
+				BEAA7B531B4BB0B40030BA72 /* ALHRFLXNodeMiddleViewController.h */,
+				BEAA7B541B4BB0B40030BA72 /* ALHRFLXNodeMiddleViewController.m */,
 				BE53D6561B4A32B700749B08 /* ALFLEXBOXUtils.h */,
 				BE53D6571B4A32B700749B08 /* ALFLEXBOXUtils.m */,
 			);
@@ -402,6 +412,7 @@
 				BEE073881B429FD000415117 /* FLXNode.m in Sources */,
 				BEE073621B412E2B00415117 /* FLEXBOXNode.m in Sources */,
 				BE53D6511B48C3C300749B08 /* HRFLXNode.m in Sources */,
+				BEAA7B551B4BB0B40030BA72 /* ALHRFLXNodeMiddleViewController.m in Sources */,
 				BE53D6581B4A32B700749B08 /* ALFLEXBOXUtils.m in Sources */,
 				BEE073891B429FD000415117 /* FLXView.m in Sources */,
 				BEE073641B412E2B00415117 /* Layout.c in Sources */,
@@ -416,6 +427,7 @@
 				BEE073481B412CB100415117 /* HomeViewController.m in Sources */,
 				BEE073651B412E2B00415117 /* UIView+FLEXBOX.m in Sources */,
 				BEE0738B1B429FD000415117 /* UIView+Flex.m in Sources */,
+				BEAA7B521B4BAFCE0030BA72 /* ALSampleViewController.m in Sources */,
 				BEE073861B429FD000415117 /* FLXData.m in Sources */,
 				BEE073751B4284E900415117 /* SupportCode.swift in Sources */,
 				BEE0734E1B412CB100415117 /* AppDelegate.m in Sources */,
